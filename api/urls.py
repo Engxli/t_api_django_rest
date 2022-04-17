@@ -5,8 +5,6 @@ from . import views
 
 urlpatterns = [
 
-    path('register/', UserViewSet.as_view({'post': 'create'}), name="api-register"),
-    path("login/", TokenObtainPairView.as_view(), name="api-login"),
     path('', include('djoser.urls')),
     path('', include('djoser.urls.jwt')),
     
